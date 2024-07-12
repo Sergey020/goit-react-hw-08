@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
 import Contact from "../Contact/Contact";
-import css from "./ContactList.module.css";
 import {
   selectError,
   selectFilteredContacts,
@@ -14,7 +13,7 @@ const ContactList = () => {
   const error = useSelector(selectError);
 
   return (
-    <ul className={css.list}>
+    <ul>
       {isLoading && !error && <Loader />}
       {error && <p>Something went wrong!</p>}
       {contacts.map((contact) => (

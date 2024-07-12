@@ -17,7 +17,7 @@ export default function ContactsPage() {
 
   return (
     <>
-      <PageTitle>Phonebook</PageTitle>
+      <PageTitle>Your contacts</PageTitle>
       <ContactForm />
       <SearchBox />
       {isLoading && "Request in progress..."}

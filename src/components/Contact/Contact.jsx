@@ -1,4 +1,3 @@
-import css from "./Contact.module.css";
 import { FaUser } from "react-icons/fa";
 import { MdLocalPhone } from "react-icons/md";
 import { useDispatch } from "react-redux";
@@ -10,14 +9,14 @@ const Contact = ({ name, number, id }) => {
   const handleClickDelete = () => dispatch(deleteContact(id));
 
   return (
-    <div className={css.item}>
+    <div>
       <div>
         <p>
-          <FaUser className={css.icon} />
+          <FaUser />
           {name}
         </p>
         <p>
-          <MdLocalPhone className={css.icon} />
+          <MdLocalPhone />
           {number}
         </p>
       </div>

@@ -8,11 +8,12 @@ export default function HomePage() {
   return (
     <>
       {isLoggedIn ? (
-        <PageTitle>This is a place to store your contacts!</PageTitle>
+        <PageTitle>This is your phonebook</PageTitle>
       ) : (
         <>
           <PageTitle>
-            Please, <Link to="/register">register</Link> to continue
+            Please,<Link to="/register"> register </Link>if you whant to
+            continue
           </PageTitle>
         </>
       )}
