@@ -1,7 +1,8 @@
-import { VscAccount } from "react-icons/vsc";
-import { VscCallOutgoing } from "react-icons/vsc";
+import css from "./Contact.module.css";
+import { FaUser } from "react-icons/fa";
+import { MdLocalPhone } from "react-icons/md";
 import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/contactsOps";
+import { deleteContact } from "../../redux/contacts/operations";
 
 const Contact = ({ name, number, id }) => {
   const dispatch = useDispatch();
@@ -9,14 +10,14 @@ const Contact = ({ name, number, id }) => {
   const handleClickDelete = () => dispatch(deleteContact(id));
 
   return (
-    <div>
+    <div className={css.item}>
       <div>
         <p>
-          <VscAccount />
+          <FaUser className={css.icon} />
           {name}
         </p>
         <p>
-          <VscCallOutgoing />
+          <MdLocalPhone className={css.icon} />
           {number}
         </p>
       </div>
